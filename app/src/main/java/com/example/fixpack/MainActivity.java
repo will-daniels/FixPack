@@ -19,5 +19,7 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.setEnterFadeDuration(200);
         animationDrawable.setExitFadeDuration(8000);
         animationDrawable.start();
+
+        // test// fuck
     }
 }
