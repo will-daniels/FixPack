@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout"
+    android:background="@drawable/background_gradient_list"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/fixPack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="FixPack"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/scan_to_start"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/custom_button"
+        android:text="Scan To Start"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fixPack" />
+
+    <ImageView
+        android:id="@+id/camera_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="-1dp"
+        android:padding="2dp"
+        android:src="@drawable/ic_camera"
+        android:translationZ="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/scan_to_start"
+        app:layout_constraintEnd_toEndOf="@+id/scan_to_start"
+        app:layout_constraintTop_toTopOf="@+id/scan_to_start" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
