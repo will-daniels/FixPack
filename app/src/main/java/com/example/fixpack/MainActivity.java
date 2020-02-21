@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.View;
@@ -54,6 +55,11 @@ public class MainActivity extends AppCompatActivity {
         mAdapter.notifyItemChanged(position);
     }
 
+    public void openManual() {
+        Intent intent = new Intent(this, InstructionActivity.class);
+        startActivity(intent);
+    }
+
     public void createManualList() {
         mManualList = new ArrayList<>();
         mManualList.add(new RecyclerItem("Some Manual 1", "Manual No: 001"));
@@ -76,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 changeItem(position, "Clicked");
+                openManual();
             }
 
             @Override
